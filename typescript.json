@@ -1,0 +1,83 @@
+{
+  "Try Catch Block": {
+    "prefix": "catch",
+    "body": [
+      "try {",
+      "\t$1",
+      "} catch (error) {",
+      "\tconsole.error(error);",
+      "}"
+    ],
+    "description": "Generates a try-catch block"
+  },
+  "Class Definition": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName} {",
+      "\tconstructor($2) {",
+      "\t\t$3",
+      "\t}",
+      "}"
+    ],
+    "description": "Class definition"
+  },
+  "Function Definition": {
+    "prefix": "func",
+    "body": [
+      "function ${1:functionName}(${2:params}) {",
+      "\t$3",
+      "}"
+    ],
+    "description": "Function definition"
+  },
+  "Arrow Function Definition": {
+    "prefix": "afunc",
+    "body": [
+      "const ${1:functionName} = (${2:params}) => {",
+      "\t$3",
+      "};"
+    ],
+    "description": "Arrow function definition"
+  },
+  "Console Log": {
+    "prefix": "clog",
+    "body": ["console.log($1);"],
+    "description": "Console Log"
+  },
+  "New Promise": {
+    "prefix": "npromise",
+    "body": [
+      "new Promise((resolve, reject) => {",
+      "\t$1",
+      "})"
+    ],
+    "description": "New Promise"
+  },
+  "Import Statement": {
+    "prefix": "import",
+    "body": ["import ${1:moduleName} from '${2:module}';"],
+    "description": "Import statement"
+  },
+  "Export Default": {
+    "prefix": "exportdef",
+    "body": ["export default $1;"],
+    "description": "Export default"
+  },
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:ComponentName} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "React Functional Component"
+  }
+}
